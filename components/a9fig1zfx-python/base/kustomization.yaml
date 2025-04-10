@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: a9fig1zfx-python
+  janus-idp.io/tekton: a9fig1zfx-python
+  backstage.io/kubernetes-id: a9fig1zfx-python
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: a9fig1zfx-python
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
